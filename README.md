@@ -85,7 +85,7 @@ python app.py --query "Your query here" --top_k 3
 
 ## Test Queries and Results
 
-Full logs are in `logs/test_results_20260226_190239.log`.
+Full logs are in `logs/test_results_20260226_224524.log`.
 
 ---
 
