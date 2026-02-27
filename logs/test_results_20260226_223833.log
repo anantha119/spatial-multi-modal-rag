@@ -1,0 +1,531 @@
+Multimodal RAG Test Run
+Timestamp: 2026-02-26T22:38:33.812777
+Log file:  /projectnb/synthdata/Ananth/spatial/logs/test_results_20260226_223833.log
+Queries:   6
+
+[Pipeline] Initializing components...
+[Retriever] Initializing...
+[Retriever] Text collection:  35807 docs
+[Retriever] Image collection: 21633 docs
+[TextEncoder] Loading sentence-transformers/all-MiniLM-L6-v2...
+[TextEncoder] Ready. Dimension: 384
+[ImageEncoder] Loading clip-ViT-B-32...
+[ImageEncoder] Ready. Dimension: 512
+[ContextBuilder] Loading documents for group_id linkage...
+[ContextBuilder] Ready. 21633 text groups, 21633 image groups indexed.
+[Pipeline] Ready.
+
+
+######################################################################
+  QUERY 1 of 6
+######################################################################
+
+QUERY: What does the diagram question say about the correct choice? Return the answer and cite the diagram.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: ai2d_0195_txt_1
+      Score: 0.6629
+      Group: ai2d_0195
+      Content: Question: which part of diagram would be bottom? Answer: f...
+
+  [2] ID: ai2d_0703_txt_3
+      Score: 0.6406
+      Group: ai2d_0703
+      Content: Question: which part of the diagram is large circle? Answer: B...
+
+  [3] ID: ai2d_0630_txt_2
+      Score: 0.6347
+      Group: ai2d_0630
+      Content: Question: Which region in the diagram represents the mentale Answer: B...
+
+  [4] ID: ai2d_0781_txt_0
+      Score: 0.6242
+      Group: ai2d_0781
+      Content: Question: What represents the neutral in the diagram? Answer: C...
+
+  [5] ID: ai2d_0579_txt_0
+      Score: 0.6215
+      Group: ai2d_0579
+      Content: Question: What diagram is shown above? Answer: Earth...
+
+--- Image Results (top 5) ---
+  [1] ID: ai2d_0373_img
+      Score: 0.3233
+      Group: ai2d_0373
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0373.png
+
+  [2] ID: ai2d_0010_img
+      Score: 0.3216
+      Group: ai2d_0010
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0010.png
+
+  [3] ID: ai2d_0522_img
+      Score: 0.3171
+      Group: ai2d_0522
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0522.png
+
+  [4] ID: ai2d_0363_img
+      Score: 0.3167
+      Group: ai2d_0363
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0363.png
+
+  [5] ID: ai2d_0068_img
+      Score: 0.3077
+      Group: ai2d_0068
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0068.png
+
+======================================================================
+[Generate] Loading VLM: Qwen/Qwen3-VL-8B-Instruct...
+[Generate] VLM loaded.
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: What does the diagram question say about the correct choice? Return the answer and cite the diagram.
+
+The retrieved evidence does not contain a specific diagram question that explicitly states what the correct choice is. While several diagrams and their associated text questions are provided, none directly answer the query about what a diagram question says regarding the correct choice. The text results describe what parts of diagrams represent (e.g., "F" is the bottom, "B" is the large circle) or what stages are shown, but they do not address the specific query about a diagram question's statement on the correct choice.
+
+The retrieved evidence is insufficient to answer this query.
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 0
+  Valid:   0  []
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  QUERY 2 of 6
+######################################################################
+
+QUERY: Find a relevant AI2D diagram about a process or cycle. Summarize what it shows in 2 sentences. Cite.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: ai2d_0017_txt_1
+      Score: 0.6193
+      Group: ai2d_0017
+      Content: Question: What process does this diagram portray? Answer: Life Cycle of a Plant...
+
+  [2] ID: ai2d_0313_txt_1
+      Score: 0.5605
+      Group: ai2d_0313
+      Content: Question: Label D refers to which cycle in the diagram? Answer: Pupa...
+
+  [3] ID: ai2d_0528_txt_1
+      Score: 0.5541
+      Group: ai2d_0528
+      Content: Question: What is shown by the diagram? Answer: The life cycle of a plant...
+
+  [4] ID: ai2d_0608_txt_2
+      Score: 0.5482
+      Group: ai2d_0608
+      Content: Question: What process does this diagram portray? Answer: Life cycle of a mosquito...
+
+  [5] ID: ai2d_0184_txt_0
+      Score: 0.5437
+      Group: ai2d_0184
+      Content: Question: What do you call the process that is shown above? Answer: Life cycle...
+
+--- Image Results (top 5) ---
+  [1] ID: ai2d_0287_img
+      Score: 0.31
+      Group: ai2d_0287
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0287.png
+
+  [2] ID: ai2d_0015_img
+      Score: 0.3031
+      Group: ai2d_0015
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0015.png
+
+  [3] ID: ai2d_0522_img
+      Score: 0.2993
+      Group: ai2d_0522
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0522.png
+
+  [4] ID: ai2d_0335_img
+      Score: 0.2982
+      Group: ai2d_0335
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0335.png
+
+  [5] ID: ai2d_0373_img
+      Score: 0.2973
+      Group: ai2d_0373
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0373.png
+
+======================================================================
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: Find a relevant AI2D diagram about a process or cycle. Summarize what it shows in 2 sentences. Cite.
+
+The diagram shows the life cycle of a plant, illustrating its progression from a seed to a mature plant and back to seed production [ai2d_0017_img] [ai2d_0017_txt_1]. Another relevant diagram depicts the life cycle of a mosquito, showing its stages from egg to adult, including larval and pupal forms [ai2d_0313_img] [ai2d_0608_txt_2].
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 4
+  Valid:   4  ['ai2d_0017_img', 'ai2d_0017_txt_1', 'ai2d_0313_img', 'ai2d_0608_txt_2']
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  QUERY 3 of 6
+######################################################################
+
+QUERY: Retrieve a diagram and its paired text with the same group_id. Explain how you linked them. Cite both.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: ai2d_0339_txt_3
+      Score: 0.4513
+      Group: ai2d_0339
+      Content: Question: Which describes label A in the above diagram? Answer: animals...
+
+  [2] ID: ai2d_0313_txt_1
+      Score: 0.4359
+      Group: ai2d_0313
+      Content: Question: Label D refers to which cycle in the diagram? Answer: Pupa...
+
+  [3] ID: ai2d_0518_txt_0
+      Score: 0.435
+      Group: ai2d_0518
+      Content: Question: Which diagram contains an organism which resembles human beings? Answer: B...
+
+  [4] ID: ai2d_0117_txt_0
+      Score: 0.4333
+      Group: ai2d_0117
+      Content: Question: What is A in the diagram? Answer: face...
+
+  [5] ID: ai2d_0017_txt_0
+      Score: 0.43
+      Group: ai2d_0017
+      Content: Question: What organism does this diagram portray? Answer: A plant...
+
+--- Image Results (top 5) ---
+  [1] ID: ai2d_0373_img
+      Score: 0.3203
+      Group: ai2d_0373
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0373.png
+
+  [2] ID: ai2d_0010_img
+      Score: 0.3139
+      Group: ai2d_0010
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0010.png
+
+  [3] ID: ai2d_0363_img
+      Score: 0.3123
+      Group: ai2d_0363
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0363.png
+
+  [4] ID: ai2d_0522_img
+      Score: 0.3113
+      Group: ai2d_0522
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0522.png
+
+  [5] ID: ai2d_0564_img
+      Score: 0.309
+      Group: ai2d_0564
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0564.png
+
+======================================================================
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: Retrieve a diagram and its paired text with the same group_id. Explain how you linked them. Cite both.
+
+Here is a diagram and its paired text with the same group_id:
+
+Diagram: [ai2d_0373_img]
+Paired Text: [ai2d_0373_txt_0], [ai2d_0373_txt_1], [ai2d_0373_txt_2]
+
+I linked them by observing that the group_id `ai2d_0373` is shared between the image and all three text results. The text results are explicitly paired with the image, as indicated by the "Paired image" field in the text results and the "Linked text from group ai2d_0373" section for the image. The text provides descriptions of the diagram's stages, such as identifying "A" as the "check phase" and "B" as the "Act" phase, which directly correspond to the labels in the diagram. The diagram visually shows the four stages (A, B, C, D) connected in a cycle, matching the text's description of four stages.
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 4
+  Valid:   4  ['ai2d_0373_img', 'ai2d_0373_txt_0', 'ai2d_0373_txt_1', 'ai2d_0373_txt_2']
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  QUERY 4 of 6
+######################################################################
+
+QUERY: Find a chart about comparison across categories. State which category is highest. Cite the chart.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: chartqa_3397_txt_0
+      Score: 0.5781
+      Group: chartqa_3397
+      Content: Question: Which category recorded highest value in the chart? Answer: Vaccines...
+
+  [2] ID: chartqa_2123_txt_0
+      Score: 0.5443
+      Group: chartqa_2123
+      Content: Question: Which dominates the chart? Answer: Yes...
+
+  [3] ID: chartqa_19468_txt_1
+      Score: 0.5439
+      Group: chartqa_19468
+      Content: Question: What is the difference in the value of highest and second highest bar in the chart? Answer: 82.2...
+
+  [4] ID: chartqa_1771_txt_0
+      Score: 0.5351
+      Group: chartqa_1771
+      Content: Question: What category has the highest value? Answer: Confirmed...
+
+  [5] ID: chartqa_0503_txt_0
+      Score: 0.5168
+      Group: chartqa_0503
+      Content: Question: How many categories are there in the chart? Answer: 3...
+
+--- Image Results (top 5) ---
+  [1] ID: chartqa_7834_img
+      Score: 0.2999
+      Group: chartqa_7834
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_7834.png
+
+  [2] ID: chartqa_8122_img
+      Score: 0.2943
+      Group: chartqa_8122
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_8122.png
+
+  [3] ID: chartqa_7176_img
+      Score: 0.2942
+      Group: chartqa_7176
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_7176.png
+
+  [4] ID: chartqa_9546_img
+      Score: 0.2938
+      Group: chartqa_9546
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_9546.png
+
+  [5] ID: chartqa_20114_img
+      Score: 0.2937
+      Group: chartqa_20114
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_20114.png
+
+======================================================================
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: Find a chart about comparison across categories. State which category is highest. Cite the chart.
+
+The bar chart comparing revenue across pharmaceutical categories shows that "Vaccines" recorded the highest value. [chartqa_3397_img] [chartqa_3397_txt_0]
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 2
+  Valid:   2  ['chartqa_3397_img', 'chartqa_3397_txt_0']
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  QUERY 5 of 6
+######################################################################
+
+QUERY: Find a chart question that requires reading values. Answer it and cite chart + text evidence.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: chartqa_0687_txt_0
+      Score: 0.5867
+      Group: chartqa_0687
+      Content: Question: What kind of chart is it Answer: bar chart...
+
+  [2] ID: chartqa_0079_txt_0
+      Score: 0.5516
+      Group: chartqa_0079
+      Content: Question: Find how many year's data is compared in the chart? Answer: 8...
+
+  [3] ID: chartqa_2995_txt_0
+      Score: 0.5461
+      Group: chartqa_2995
+      Content: Question: What was the highest value on the chart? Answer: 56.01...
+
+  [4] ID: chartqa_2383_txt_0
+      Score: 0.5448
+      Group: chartqa_2383
+      Content: Question: What is the value of the blue line chart in 2009 Answer: 13.4...
+
+  [5] ID: chartqa_1803_txt_0
+      Score: 0.5337
+      Group: chartqa_1803
+      Content: Question: How many years data compared in the chart? Answer: 7...
+
+--- Image Results (top 5) ---
+  [1] ID: chartqa_5836_img
+      Score: 0.2792
+      Group: chartqa_5836
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_5836.png
+
+  [2] ID: chartqa_14936_img
+      Score: 0.2777
+      Group: chartqa_14936
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_14936.png
+
+  [3] ID: chartqa_14703_img
+      Score: 0.2772
+      Group: chartqa_14703
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_14703.png
+
+  [4] ID: chartqa_20670_img
+      Score: 0.2769
+      Group: chartqa_20670
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_20670.png
+
+  [5] ID: chartqa_5135_img
+      Score: 0.2767
+      Group: chartqa_5135
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/chartqa/chartqa_5135.png
+
+======================================================================
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: Find a chart question that requires reading values. Answer it and cite chart + text evidence.
+
+The chart question "What was the value of imports from Nigeria in dollars in 2020?" requires reading a value from the chart. The chart shows the import volume in billion U.S. dollars, and the value for 2020 is explicitly labeled as 1.48. [chartqa_5836_img] [chartqa_5836_txt_0]
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 2
+  Valid:   2  ['chartqa_5836_img', 'chartqa_5836_txt_0']
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  QUERY 6 of 6
+######################################################################
+
+QUERY: Retrieve a chart and produce a one-sentence operator summary (what a technician would do next). Cite.
+TOP_K: 5
+
+======================================================================
+RETRIEVAL RESULTS
+======================================================================
+
+--- Text Results (top 5) ---
+  [1] ID: chartqa_0687_txt_0
+      Score: 0.4984
+      Group: chartqa_0687
+      Content: Question: What kind of chart is it Answer: bar chart...
+
+  [2] ID: chartqa_1613_txt_0
+      Score: 0.4231
+      Group: chartqa_1613
+      Content: Question: How many uses are included in the chart? Answer: 8...
+
+  [3] ID: chartqa_1847_txt_0
+      Score: 0.4215
+      Group: chartqa_1847
+      Content: Question: Which type of claim dominates the chart? Answer: Business interruption...
+
+  [4] ID: chartqa_1374_txt_0
+      Score: 0.4177
+      Group: chartqa_1374
+      Content: Question: What represents the two bars in the chart?? Answer: [Bad job, Good job]...
+
+  [5] ID: chartqa_1936_txt_0
+      Score: 0.4098
+      Group: chartqa_1936
+      Content: Question: What's the leading response in the chart? Answer: Don't know...
+
+--- Image Results (top 5) ---
+  [1] ID: ai2d_0564_img
+      Score: 0.2872
+      Group: ai2d_0564
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0564.png
+
+  [2] ID: ai2d_0015_img
+      Score: 0.2843
+      Group: ai2d_0015
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0015.png
+
+  [3] ID: ai2d_0522_img
+      Score: 0.2829
+      Group: ai2d_0522
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0522.png
+
+  [4] ID: ai2d_0710_img
+      Score: 0.2808
+      Group: ai2d_0710
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0710.png
+
+  [5] ID: ai2d_0258_img
+      Score: 0.2774
+      Group: ai2d_0258
+      Path: /projectnb/synthdata/Ananth/spatial/data/images/ai2d/ai2d_0258.png
+
+======================================================================
+
+======================================================================
+GENERATED ANSWER
+======================================================================
+
+Query: Retrieve a chart and produce a one-sentence operator summary (what a technician would do next). Cite.
+
+The bar chart shows the prevalence of bipolar disorder by age group worldwide in 2000, with the highest prevalence (0.87%) in the 20-24 age group and the lowest (0.14%) in the 5-14 age group [chartqa_0687_img] [chartqa_0687_txt_0]. A technician would next analyze this data to identify age-specific trends in bipolar disorder prevalence for public health planning or research purposes.
+
+----------------------------------------------------------------------
+CITATION VALIDATION
+----------------------------------------------------------------------
+  Total citations found: 2
+  Valid:   2  ['chartqa_0687_img', 'chartqa_0687_txt_0']
+  Invalid: 0  []
+======================================================================
+
+######################################################################
+  BATCH SUMMARY
+######################################################################
+  [ABSTAIN] Q1: 0 citations, 0 valid, 0 invalid
+         What does the diagram question say about the correct choice? Return the answer a
+  [PASS] Q2: 4 citations, 4 valid, 0 invalid
+         Find a relevant AI2D diagram about a process or cycle. Summarize what it shows i
+  [PASS] Q3: 4 citations, 4 valid, 0 invalid
+         Retrieve a diagram and its paired text with the same group_id. Explain how you l
+  [PASS] Q4: 2 citations, 2 valid, 0 invalid
+         Find a chart about comparison across categories. State which category is highest
+  [PASS] Q5: 2 citations, 2 valid, 0 invalid
+         Find a chart question that requires reading values. Answer it and cite chart + t
+  [PASS] Q6: 2 citations, 2 valid, 0 invalid
+         Retrieve a chart and produce a one-sentence operator summary (what a technician 
+######################################################################
+
+Log saved to: /projectnb/synthdata/Ananth/spatial/logs/test_results_20260226_223833.log

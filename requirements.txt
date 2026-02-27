@@ -1,0 +1,9 @@
+torch
+transformers
+sentence-transformers
+datasets
+chromadb
+pysqlite3-binary
+Pillow
+numpy
+accelerate
