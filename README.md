@@ -2,6 +2,12 @@
 
 A multimodal Retrieval-Augmented Generation system that ingests text and images from AI2D and ChartQA datasets, performs cross-modal retrieval (text-to-text and text-to-image), and generates grounded answers with traceable citations to retrieved evidence.
 
+## Architecture
+
+![Architecture Diagram](assets/architecture-diagram.svg)
+
+See [architecture.pdf](architecture.pdf) for the full write-up.
+
 ## Repo Structure
 
 ```
@@ -185,11 +191,7 @@ Citations: 2 valid, 0 invalid
 
 Zero hallucinated citations across all 6 queries. Queries 2 through 6 produced grounded answers with valid citations to both text and image evidence. Query 1 abstained because the meta-referential phrasing ("what does the diagram question say about the correct choice") does not match well against stored QA pairs in the dense retrieval space. The system correctly identified insufficient evidence and declined to fabricate an answer. A hybrid retrieval approach combining BM25 keyword matching with dense retrieval would handle this query type.
 
-## Architecture
 
-![Architecture Diagram](assets/architecture-diagram.svg)
-
-See [architecture.pdf](architecture.pdf) for the full write-up.
 
 ## Known Limitations and Improvements
 
