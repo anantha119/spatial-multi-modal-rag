@@ -187,7 +187,7 @@ Zero hallucinated citations across all 6 queries. Queries 2 through 6 produced g
 
 ## Architecture
 
-![Architecture Diagram](assets/architecture.svg)
+![Architecture Diagram](assets/architecture-diagram.svg)
 
 See [architecture.pdf](architecture.pdf) for the full write-up.
 
